@@ -1,0 +1,127 @@
+<!DOCTYPE>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>Repositorio</title>
+        <style type="text/css">
+            A:link, A:visited { text-decoration: none; color:#49A2D2; }
+            A:hover { text-decoration: none; color:#4957D2; }
+        </style>
+        <link href="styles/style.css" rel="stylesheet" >
+        <link href="styles/site.css" rel="stylesheet">
+        <link href="styles/validationEngine.jquery.css" rel="stylesheet"/>
+        <link href="styles/themes/metroblue/jquery-ui.css" rel="stylesheet">
+        <link href="styles/themes/metro/blue/jtable.css" rel="stylesheet"/>
+
+        <link rel="stylesheet" href="styles/jquery.fancybox.css?v=2.1.5"  media="screen" />
+        <link rel="stylesheet" href="styles/jquery.fancybox-buttons.css?v=1.0.5"  media="screen" />
+
+        <script src="js/jquery-2.0.3.min.js"></script>
+        <script type="text/javascript" src="js/jqmenu/jquery.ui.core.min.js"></script>
+        <script type="text/javascript" src="js/jqmenu/jquery.ui.widget.min.js"></script>
+        <script type="text/javascript" src="js/jqmenu/jquery.ui.accordion.min.js"></script>
+        <script type="text/javascript" src="js/jqmenu/jquery.ui.effect.min.js"></script>
+
+        <script src="js/jquery-ui-1.9.2.min.js"></script>
+        <script src="js/jtable/jquery.jtable.js"></script>
+        <script src="js/jtable/localization/jquery.jtable.es.js"></script>
+
+        <script type="text/javascript" src="js/jquery.fancybox.pack.js?v=2.1.5"></script>
+        <script type="text/javascript" src="js/jquery.fancybox-buttons.js?v=1.0.5"></script>
+
+        <script src="js/control.js"></script>
+        <script src="js/jquery.validationEngine.js"></script>
+        <script src="js/jquery.validationEngine-es.js"></script>
+
+    </head>
+    <body >
+
+        <div id="jQueryAccordion1" style="position:absolute;left:10px;top:80px;width:198px;height:300px;z-index:0;">
+            <div id="jQueryAccordion1_id" style="position:absolute;width:198px;height:600px">
+                <h3>Niveles</h3>
+                <div id="selectNiveles">
+                    <div><a class="mat" onclick="cargaMenu(0,1)" >Nivel 1</a></div>
+                    <div><a class="mat" onclick="javascript:cargaMenu(0,2)" >Nivel 2</a></div>
+                    <div><a class="mat" onclick="javascript:cargaMenu(0,3)" >Nivel 3</a></div>
+                    <div><a class="mat" onclick="javascript:cargaMenu(0,4)" >Nivel 4</a></div>
+                </div>
+                <h3>Materias</h3>
+                <div id="selectMaterias">
+                     <div><a class="mat" onclick="javascript:cargaMenu(1,1)" >Analisis Vectorial</a></div>
+                     <div><a class="mat" onclick="javascript:cargaMenu(1,2)" >Calculo</a></div>
+                     <div><a class="mat" onclick="javascript:cargaMenu(1,3)" >Matematicas Discretas</a></div>
+                     <div><a class="mat" onclick="javascript:cargaMenu(1,4)" >Algoritmia y Programacion Estructurada</a></div>
+                     <div><a class="mat" onclick="javascript:cargaMenu(1,5)" >Fisica</a></div>
+                     <div><a class="mat" onclick="javascript:cargaMenu(1,6)" >Ingenieria Etica y Sociedad</a></div>
+                     <div><a class="mat" onclick="javascript:cargaMenu(1,7)" >Ecuaciones Diferenciales</a></div>
+                     <div><a class="mat" onclick="javascript:cargaMenu(1,8)" >Algebra Lineal</a></div>
+                     <div><a class="mat" onclick="javascript:cargaMenu(1,9)" >Calculo Aplicado</a></div>
+                     <div><a class="mat" onclick="javascript:cargaMenu(1,10)" >Estructura de Datos</a></div>
+                     <div><a class="mat" onclick="javascript:cargaMenu(1,11)" >Comunicacion Oral y Escrita</a></div>
+                     <div><a class="mat" onclick="javascript:cargaMenu(1,12)" >Analisis Fundamental de Circuitos</a></div>
+                     <div><a class="mat" onclick="javascript:cargaMenu(1,13)" >Matematicas Avanzadas para la Ingenieria</a></div>
+                     <div><a class="mat" onclick="javascript:cargaMenu(1,14)" >Fundamentos Economicos</a></div>
+                     <div><a class="mat" onclick="javascript:cargaMenu(1,15)" >Fundamentos de Diseño Digital</a></div>
+                     <div><a class="mat" onclick="javascript:cargaMenu(1,16)" >Teoria Computacional</a></div>
+                     <div><a class="mat" onclick="javascript:cargaMenu(1,17)" >Bases de Datos</a></div>
+                     <div><a class="mat" onclick="javascript:cargaMenu(1,18)" >Programacion Orientada a Objetos</a></div>
+                     <div><a class="mat" onclick="javascript:cargaMenu(1,19)" >Electronica Analogica</a></div>
+                     <div><a class="mat" onclick="javascript:cargaMenu(1,20)" >Redes de Computadoras</a></div>
+                     <div><a class="mat" onclick="javascript:cargaMenu(1,21)" >Diseno de Sistemas Digitales</a></div>
+                     <div><a class="mat" onclick="javascript:cargaMenu(1,22)" >Sistemas Operativos</a></div>
+                     <div><a class="mat" onclick="javascript:cargaMenu(1,23)" >Analisis y Diseno Orientado a Objetos</a></div>
+                     <div><a class="mat" onclick="javascript:cargaMenu(1,24)" >Tecnologias Web</a></div>
+                     <div><a class="mat" onclick="javascript:cargaMenu(1,25)" >Administracion Financiera</a></div>
+                     <div><a class="mat" onclick="javascript:cargaMenu(1,26)" >Arquitectura de Computadoras</a></div>
+                     <div><a class="mat" onclick="javascript:cargaMenu(1,28)" >Analisis de Algoritmos</a></div>
+                     <div><a class="mat" onclick="javascript:cargaMenu(1,28)" >Ingenieria de Software</a></div>
+                     <div><a class="mat" onclick="javascript:cargaMenu(1,29)" >Administracion de Proyectos</a></div>
+                     <div><a class="mat" onclick="javascript:cargaMenu(1,30)" >Instrumentacion</a></div>
+                     <div><a class="mat" onclick="javascript:cargaMenu(1,31)" >Teoria de Comunicaciones y Senales</a></div>
+                     <div><a class="mat" onclick="javascript:cargaMenu(1,32)" >Aplicaciones para Comunicaciones en Red</a></div>
+                     <div><a class="mat" onclick="javascript:cargaMenu(1,33)" >Metodos Cuantitativos</a></div>
+                     <div><a class="mat" onclick="javascript:cargaMenu(1,34)" >Introduccion a los Microcontroladores</a></div>
+                     <div><a class="mat" onclick="javascript:cargaMenu(1,35)" >Compiladores</a></div>
+                     <div><a class="mat" onclick="javascript:cargaMenu(1,36)" >Bases de Datos Distribuidas</a></div>
+                     <div><a class="mat" onclick="javascript:cargaMenu(1,37)" >Desarrollo de Sistemas Distribuidos</a></div>
+                     <div><a class="mat" onclick="javascript:cargaMenu(1,38)" >Administracion de Servicios</a></div>
+                     <div><a class="mat" onclick="javascript:cargaMenu(1,39)" >Gestion Empresarial</a></div>
+                     <div><a class="mat" onclick="javascript:cargaMenu(1,40)" >Liderazgo y Desarrollo Profesional</a></div>
+                     <div><a class="mat" onclick="javascript:cargaMenu(1,41)" >Trabajo Terminal I</a></div>
+                     <div><a class="mat" onclick="javascript:cargaMenu(1,42)" >Trabajo Terminal II</a></div>
+
+                </div>
+
+                <h3>Maestros</h3>
+                <div id="selectMaestros">
+                     <div><a class="mat" onclick="javascript:cargaMenu(2,1)" >Rocio Resendiz Munoz</a></div>
+                     <div><a class="mat" onclick="javascript:cargaMenu(2,2)" >Manuel Carballo Jimenez</a></div>
+                     <div><a class="mat" onclick="javascript:cargaMenu(2,3)" >Patricia Jimenez Villanueva</a></div>
+                     <div><a class="mat" onclick="javascript:cargaMenu(2,4)" >Florencio Guzman Aguilar</a></div>
+                     <div><a class="mat" onclick="javascript:cargaMenu(2,5)" >Gumersindo Vera Hernandez</a></div>
+                     <div><a class="mat" onclick="javascript:cargaMenu(2,6)" >Mosso Garcia Garcia</a></div>
+                     <div><a class="mat" onclick="javascript:cargaMenu(2,7)" >Eduardo Rodriguez Flores</a></div>
+                     <div><a class="mat" onclick="javascript:cargaMenu(2,8)" >Juan Martinez Diaz</a></div>
+                     <div><a class="mat" onclick="javascript:cargaMenu(2,9)" >Fernando Aguilar Sanchez</a></div>
+                     <div><a class="mat" onclick="javascript:cargaMenu(2,10)" >Ignacio Rios delaTorre</a></div>
+                     <div><a class="mat" onclick="javascript:cargaMenu(2,11)" >Yaxkin Flores Mendoza</a></div>
+                     <div><a class="mat" onclick="javascript:cargaMenu(2,12)" >Quintanilla Sanchez Sanchez</a></div>
+                     <div><a class="mat" onclick="javascript:cargaMenu(2,13)" >Joel Juarez Gambino</a></div>
+                     <div><a class="mat" onclick="javascript:cargaMenu(2,14)" >Gelacio Castillo Cabrera</a></div>
+                     <div><a class="mat" onclick="javascript:cargaMenu(2,15)" >Rafael Saucedo Delgado</a></div>
+                     <div><a class="mat" onclick="javascript:cargaMenu(2,16)" >Angel Morales Gonzales</a></div>
+                     <div><a class="mat" onclick="javascript:cargaMenu(2,17)" >Ruben Ortega Gonzales</a></div>
+                     <div><a class="mat" onclick="javascript:cargaMenu(2,18)" >Miguel Maldonado Munoz</a></div>
+                     <div><a class="mat" onclick="javascript:cargaMenu(2,19)" >Hugo Puebla Lomas</a></div>
+                     <div><a class="mat" onclick="javascript:cargaMenu(2,20)" >Sigfrido Cifuentes Alvares</a></div>
+                     <div><a class="mat" onclick="javascript:cargaMenu(2,21)" >Jose Jaime Lopez Rabadan</a></div>
+                     <div><a class="mat" onclick="javascript:cargaMenu(2,22)" >Macario Hernandez Cruz</a></div>
+                     <div><a class="mat" onclick="javascript:cargaMenu(2,23)" >Alejandro Botello Castillo</a></div>
+                </div>
+            </div>
+        </div>
+
+        <div id="FileTable"></div>
+
+    </body>
+</html>

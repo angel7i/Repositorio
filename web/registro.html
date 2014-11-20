@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+
+
+
+<html>
+    <head>
+        <title>Registro</title>
+        <link rel="stylesheet" href="styles/style.css">
+        <link href='http://fonts.googleapis.com/css?family=Varela+Round' rel='stylesheet'>
+        
+<script >
+
+var nombreV;
+var apellidopV;
+var apellidomV;
+var fecNacV;
+var idUsuarioV;
+var password1V;
+var password2V;
+var correoV;
+function Usuario(nombre, apellidop, apellidom, fecNac, idUsuario, password1, password2, correo)
+	{
+		this.nombre = nombre;
+		this.apellidop= apellidop;
+		this.apellidom = apellidom;
+                this.fecNac = fecNac;
+                this.idUsuario = idUsuario;
+                this.password1 = password1;
+                this.password2 = password2;
+                this.correo = correo;
+               
+	}
+	
+
+	function get_XmlHttp()
+    {
+        // Crea la variable que contendrÃ¡ la instancia del objeto  XMLHttpRequest (inicialmente con un valor nulo)
+        var xmlHttp = null;
+
+        if(window.XMLHttpRequest)
+        {       // para Forefox, IE7+, Opera, Safari, ...
+                xmlHttp = new XMLHttpRequest();
+        }
+        else if(window.ActiveXObject)
+             {  // para Internet Explorer 5 or 6
+                xmlHttp = new ActiveXObject("Microsoft.XMLHTTP");
+            }
+
+        return xmlHttp;
+    }
+    
+
+   
+	function alta()
+	{
+            if(registrof.password1.value !== registrof.password2.value){alert("CONTRASENAS DISTINTAS INTENTELO DE NUEVO.");}
+            else{
+		// Obtener el objeto AJAX
+      
+      var request =  get_XmlHttp();
+      
+      // Crear JSON
+      
+      nombreV=registrof.nombre.value;
+      apellidopV=registrof.apellidop.value;
+      apellidomV=registrof.apellidom.value;
+      fecNacV=registrof.fecNac.value;
+      idUsuarioV=registrof.idUsuario.value;
+      password1V=registrof.password1.value;
+      password2V=registrof.password2.value;
+      correoV=registrof.correo.value;
+      
+      var usuario = new Usuario(registrof.nombre.value,registrof.apellidop.value,registrof.apellidom.value,registrof.fecNac.value,registrof.idUsuario.value,registrof.password1.value,registrof.password2.value,registrof.correo.value);
+      var jsonUsuario = JSON.stringify(usuario);      
+		    
+      request.open("POST", "controladorR", true);
+      request.setRequestHeader("Content-Type","application/x-www-form-urlencoded");
+	 
+	  var parametro='jsonUsuario='+encodeURIComponent(jsonUsuario);	
+      request.send(parametro);
+	  
+
+      request.onreadystatechange = function()
+        {
+          if (request.readyState === 4)
+                {
+		   
+                    var respuesta = request.responseText;
+                    alert(" " + respuesta);
+                    if(respuesta==="El Usuario ya está registrado con esa boleta"){
+                        
+                    }
+                    else{
+                            var request2 =  get_XmlHttp();
+                        request2.open("POST", "CarteroP", true);
+                        request2.setRequestHeader("Content-Type","application/x-www-form-urlencoded");
+                        request2.send(parametro);
+                        
+                                                    request2.onreadystatechange = function()
+                                    {
+                                      if (request2.readyState === 4)
+                                            {
+
+                                               alert("correo enviado a "+ correoV);
+                                                }
+                                    };
+                        
+                        
+	  
+                    }
+                    
+                    
+                    }
+        };
+    }
+	}
+        
+     function hola(){
+         alert("hola desde cartero");
+     }
+        
+    	
+		</script>
+		
+		
+    </head>
+    <body>
+        <header id="headerReg">
+            <span id="title">Nueva Cuenta</span>
+            <a id="sesion" href="index.jsp">Iniciar sesion</a>
+        </header>
+        <form method="post" name="registrof" id="registrof"  action="javascript:alta()">
+            <span>¿Quien eres?</span><br><br>
+            <span>Nombre</span><br>
+            <input type="text" class="textbox" name="nombre" id="nombre" placeholder=" Nombres" required/>
+            <input type="text" class="textbox" name="apellidop" id="apellidop" placeholder=" Apellido paterno" required/>
+            <input type="text" class="textbox" name="apellidom" id="apellidom" placeholder=" Apellido materno" required/><br><br>
+            <span>Fecha de nacimiento</span><br>
+            <input type="date"  name="fecNac" id="fecNac" required/><br><br>
+            <span>Num. Boleta(Estudiantes)/RFC(Docentes)</span><br>
+            <input type="text" class="textbox" name="idUsuario" id="idUsuario" pattern="^[0-9]{10}$" required/><br><br>
+            <span>Introduce una contrasena</span><br>
+            <input type="password" class="textbox" name="password1" id="password1" required/><br><br>
+            <span>Introduce nuevamente tu contrasena</span><br>
+            <input type="password" class="textbox" name="password2" id="password2" required/><br><br>
+            <span>Correo</span><br>
+            <input type="email" title="mail@example.com" class="textbox" name="correo" id="correo" required/><br><br>
+            <input type="submit"  id="buttonReg" value="Registrar">
+        </form>
+    </body>
+</html>

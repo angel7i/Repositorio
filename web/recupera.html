@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+
+
+
+<html>
+    <head>
+        <title>Registro</title>
+        <link rel="stylesheet" href="styles/style.css">
+        <link href='http://fonts.googleapis.com/css?family=Varela+Round' rel='stylesheet'>
+        
+<script >
+
+var correoV;
+function UsuarioC(correor)
+	{
+		
+                this.correor = correor;
+               
+	}
+	
+
+	function get_XmlHttp()
+    {
+        // Crea la variable que contendrá la instancia del objeto  XMLHttpRequest (inicialmente con un valor nulo)
+        var xmlHttp = null;
+
+        if(window.XMLHttpRequest)
+        {       // para Forefox, IE7+, Opera, Safari, ...
+                xmlHttp = new XMLHttpRequest();
+        }
+        else if(window.ActiveXObject)
+             {  // para Internet Explorer 5 or 6
+                xmlHttp = new ActiveXObject("Microsoft.XMLHTTP");
+            }
+
+        return xmlHttp;
+    }
+    
+
+   
+	function recupera()
+	{
+           
+		// Obtener el objeto AJAX
+      
+      var request =  get_XmlHttp();
+      
+      // Crear JSON
+      
+      
+      correoV=recuperaf.correor.value;
+      
+      var usuarioc = new UsuarioC(recuperaf.correor.value);
+      var jsonUsuario = JSON.stringify(usuarioc);      
+		    
+      request.open("POST", "recuperaS", true);
+      request.setRequestHeader("Content-Type","application/x-www-form-urlencoded");
+	 
+	  var parametro='jsonUsuario='+encodeURIComponent(jsonUsuario);	
+      request.send(parametro);
+	  
+
+      request.onreadystatechange = function()
+        {
+          if (request.readyState === 4)
+                {
+		   
+                   alert("Correo enviado a" + correoV);                    
+                    
+                    }
+        };
+    
+	}
+        
+     function hola(){
+         alert("hola desde cartero");
+     }
+        
+    	
+		</script>
+		
+		
+    </head>
+    <body>
+        <header id="headerReg">
+            <span id="title">Recupera tu contrasena</span>
+            <a id="sesion" href="index.jsp">Iniciar sesion</a>
+        </header>
+        <form method="post" name="recuperaf" id="recuperaf"  action="javascript:recupera()">
+            <br><br>
+            
+            <span>Correo a enviar contrasena</span><br>
+            <input type="email" title="mail@example.com" class="textbox" name="correor" id="correor" required/><br><br>
+            
+            <input type="submit"  id="buttonRec" value="Enviar ">
+        </form>
+    </body>
+</html>

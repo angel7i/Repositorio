@@ -1,0 +1,200 @@
+#marco{
+        width:96%;
+	height:86%;
+	z-index:1;
+	left: 2%;
+	top: 5%;
+	border-radius: 5px;
+	border: 1px solid rgba(0, 0, 0, 0.43); 
+        position:absolute;
+        box-shadow: inset #3F77F0 0px 4px 10px, #3F77F0 0px 1px 0px;
+}
+#mainpic{
+	background-color:#0033FF;
+	position:absolute;
+	font: oblique bold 30px cursive;
+	width:14%;
+	height:37%;
+	z-index:1;
+	left: 10%;
+	top: 10%;
+	border-radius: 5px;
+	border: 1px solid rgba(0, 0, 0, 0.43);
+}
+#contexto {
+margin-top: 0px;
+border-radius: 5px;
+	width:25%;
+	height:40%;
+	z-index:1;
+	left: 27%;
+	top: 10%;
+padding-left: 10px;
+//color: rgba(10, 10, 10, 0.13);
+text-shadow: 0 2px 0 rgb(0, 0, 0);
+position:absolute;
+margin-left: 10px;
+border: 1px solid rgba(0, 0, 0, 0.43);
+background: #EEF0F4;
+//box-shadow: inset rgb(0, 0, 0) 0px 4px 10px, rgba(9, 9, 9, 0) 0px 1px 0px;
+}
+#contexto1 {
+margin-top: 0px;
+border-radius: 5px;
+	width:25%;
+	height:40%;
+	z-index:1;
+	left: 55%;
+	top: 10%;
+padding-left: 10px;
+//color: rgba(10, 10, 10, 0.13);
+text-shadow: 0 2px 0 rgb(0, 0, 0);
+position:absolute;
+margin-left: 10px;
+border: 1px solid rgba(0, 0, 0, 0.43);
+background: #EEF0F4;
+//box-shadow: inset rgb(0, 0, 0) 0px 4px 10px, rgba(9, 9, 9, 0) 0px 1px 0px;
+}
+#foto{
+	width: 90%;
+    height: 90%;
+    position:absolute;
+    left: 5%;
+	top: 5%;
+}
+
+h1{
+    text-align: right;
+    font-size: 15px;
+    font-family: Comic Sans MS, Arial, Helvetica, sans-serif;
+    font-style: normal;
+    color: #E9E643; 
+}
+p{
+    text-align: left;
+    font-size: 18px;
+    font-family: Comic Sans MS, Arial, Helvetica, sans-serif;
+    font-style: oblique;
+    color: #990F0F; 
+}
+a{
+    text-align:center;
+    font-size: 20px;
+    font-family: Comic Sans MS, Arial, Helvetica, sans-serif;
+    font-style: oblique;
+    color: #0D2250; 
+}
+#tabla1{
+  width:auto;
+  height:auto; 
+}
+#tabla1.td{
+    width: 20%;
+    height: 50%;
+}
+.box.login
+{
+	height:80%;
+        width:60%;
+	position:absolute;
+	left:30%;
+	top:10%;
+	
+}
+.boxBody
+{
+    background:#EDF9B4;
+    border-top:1px solid #dde0e8;
+    border-bottom:1px solid #dde0e8;
+    padding:10px 10px;
+}
+.box footer
+{
+    background:#eff4f6;
+    border-top:1px solid #fff;
+    padding:22px 26px;
+    overflow:hidden;
+	height:32px;
+}
+.box label
+{
+    display:block;
+    font:14px/22px Arial, Helvetica, Sans-serif;
+    margin:10px 0 0 6px;
+}
+.box footer label{
+	float:left;
+	margin:4px 0 0;
+}
+.box footer input[type=checkbox]{
+	vertical-align:sub;
+	*vertical-align:middle;
+	margin-right:10px;
+}
+.box input[type=text],
+.box input[type=password],
+.txtField
+{
+    border:1px solid #4CA0DC;
+    -webkit-border-radius:3px;
+    -moz-border-radius:3px;
+    border-radius:3px;
+    -moz-box-shadow:2px 3px 3px rgba(0, 0, 0, 0.06) inset, 0 0 1px #95a2a7 inset;
+    -webkit-box-shadow:2px 3px 3px rgba(0, 0, 0, 0.06) inset, 0 0 1px #95a2a7 inset;
+    box-shadow:2px 3px 3px rgba(0, 0, 0, 0.06) inset, 0 0 1px #95a2a7 inset;
+    margin:3px 0 4px;
+    padding:8px 6px;
+    width:200px;
+    display:block;
+}
+.box input[type=text]:focus,
+.box input[type=password]:focus,
+.txtField:focus
+{
+    border:3px solid #4CA0DC;
+    -moz-box-shadow:2px 3px 3px rgba(0, 0, 0, 0.04) inset, 0 0 1px #0d6db6 inset;
+    -webkit-box-shadow:2px 3px 3px rgba(0, 0, 0, 0.04) inset, 0 0 1px #0d6db6 inset;
+    box-shadow:2px 3px 3px rgba(0, 0, 0, 0.04) inset, 0 0 1px #0d6db6 inset;
+	color:#333;
+}
+.txtField.small
+{
+    padding:3px 6px;
+    width:200px;
+    border-width:3px !important;
+}
+.btnLogin
+{
+    -moz-border-radius:2px;
+    -webkit-border-radius:2px;
+    border-radius:15px;
+    background:#a1d8f0;
+    background:-moz-linear-gradient(top, #badff3, #7acbed);
+    background:-webkit-gradient(linear, left top, left bottom, from(#badff3), to(#7acbed));
+	-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr='#badff3', EndColorStr='#7acbed')";
+    border:1px solid #7db0cc !important;
+    cursor: pointer;
+    padding:11px 16px;
+    font:bold 11px/14px Verdana, Tahomma, Geneva;
+    text-shadow:rgba(0,0,0,0.2) 0 1px 0px; 
+    color:#fff;
+    -moz-box-shadow:inset rgba(255,255,255,0.6) 0 1px 1px, rgba(0,0,0,0.1) 0 1px 1px;
+    -webkit-box-shadow:inset rgba(255,255,255,0.6) 0 1px 1px, rgba(0,0,0,0.1) 0 1px 1px;
+    box-shadow:inset rgba(255,255,255,0.6) 0 1px 1px, rgba(0,0,0,0.1) 0 1px 1px;
+    margin-left:12px;
+    float:right;
+	padding:7px 21px;
+}
+
+.btnLogin:hover,
+.btnLogin:focus,
+.btnLogin:active{
+    background:#a1d8f0;
+    background:-moz-linear-gradient(top, #7acbed, #badff3);
+    background:-webkit-gradient(linear, left top, left bottom, from(#7acbed), to(#badff3));
+	-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr='#7acbed', EndColorStr='#badff3')";
+}
+.btnLogin:active
+{
+    text-shadow:rgba(0,0,0,0.3) 0 -1px 0px; 
+}
